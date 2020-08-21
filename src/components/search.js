@@ -58,7 +58,7 @@ class Search extends Component {
             return  data
         }).map(data => {
             return (
-                <table style={{border: "10px bold"}}>
+                <table>
                     <tbody>
                     <tr key={data.id}>
                         <td>{data.value}</td>
