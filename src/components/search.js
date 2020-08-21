@@ -45,7 +45,8 @@ class Search extends Component {
     }
 
     render() {
-        const value = this.state.menuData.filter((data) => {
+        const value = this.state.menuData.filter((data) =>
+        {
             if (this.state.search == null) {
                 return data
             } else if (data.value.toLowerCase().includes(this.state.search.toLowerCase())
@@ -54,6 +55,7 @@ class Search extends Component {
             ) {
                 return data
             }
+            return  data
         }).map(data => {
             return (
                 <table style={{border: "10px bold"}}>
@@ -82,8 +84,8 @@ class Search extends Component {
                             <th>Description</th>
                         </tr>
                         </thead>
-                         {value}
                     </table>
+                    {value}
 
                 </form>
             </div>
